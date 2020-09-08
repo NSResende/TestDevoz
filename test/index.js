@@ -145,6 +145,6 @@ describe('Testes da aplicaçao',  () => {
 
 
 
-});.
+});
 
 
