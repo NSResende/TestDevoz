@@ -135,4 +135,4 @@ router.post('/users', async ctx => {
         }
     });
 
-module.exports = router;.
+module.exports = router;
