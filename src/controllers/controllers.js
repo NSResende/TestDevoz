@@ -7,12 +7,10 @@ router.get('/', async (ctx) => {
     ctx.body = `Seu servidor esta rodando em http://localhost:3000`;
 });
 
-db = new sqlite3.Database('./DataBase/users.db', sqlite3.OPEN_READWRITE, (err) => {
-    if (err) {
-        return console.error(err.message);
-    }
-    console.log('Connected to the SQlite database.');
-});
+const path = require('path')
+const dbPath = path.resolve(__dirname, 'users.db')
+const db = new sqlite3.Database(dbPath)
+
 
 var data = [],
     records = [];
